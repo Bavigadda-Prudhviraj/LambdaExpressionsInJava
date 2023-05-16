@@ -1,0 +1,66 @@
+1.any function contains one abstract method is called functional interface
+2.without functional interface we can't write lambda expression
+3.we can create an functional interface or else we can use the pre-defined functional interface provided by the java
+--> Pre-define functional interface are
+		1.predicate-->test();
+		2.function--->apply();
+		3.consumer--->accept();
+		4.supplier--->get();
+Note:-above interface can be accessed in java.util.function package
+
+<--------Predicate-------->
+1.predicate is a functional interface(one abstract method) that is test()
+			test()
+2.test is the method which returns boolean values.
+		
+		***Imp*** 
+		@functionalInterface
+		Interface predicate(Type){
+			public abstract boolean test(arguments);
+		}
+3. this predicate is used to check conditions because it return boolean value.
+4.predicate takes one argument, that argument can be any type.
+5.we can use the lambda expressions multiple times if once it is created.
+6.in Lambda expressions we can check multiple conditions at once with out multiple if else loops or && conditions
+7.we can also join multiple predicates
+		--> to join two or more predicates we have
+				1.and
+				2.or
+				3.negate
+				
+				
+<----------Function---------->
+1.function is the functional interface which has one abstract method called.
+		apply(parameter)
+2.when a function needed to do some Operation and return something then apply is used
+3.return type must and should
+4.it will take any type of parameter it will return single value of any type.
+	
+	***imp***
+	@functionalInterFace
+	interface Function<Type,Return-type>{
+			public returnType apply(type);
+	}
+5.we can use predicate in functions
+6.we can chain the functions using two Methods are there
+		1.andThen();
+		2.compose(); 
+		
+	1.andThen()->
+		i.here first function will perform the operation 
+		ii. and then the result is passed to the next Function
+		iii. function executes from left functions to right functions
+	2. compose();
+	i. here the function executes from right ride to left side 
+
+
+<-------------Consumer-------->
+1.it takes input but it doesn't return any values
+2.it will accept one argument
+3.it accepts the inputs
+<---------Supplier------------>
+1.it does not take any input but it return a values 
+2.no arguments are required(it wont accept inputs )
+3.it will return the values
+4.it wont take any input it returns values
+5.so we need to mention the return type in supplier
